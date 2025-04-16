@@ -1,0 +1,475 @@
+{
+  "DatasetName": [
+    {
+      "DatasetName": "Platform Agreement",
+      "TechnicalDatasetName": "PlatformAgreement",
+      "DatasetSysId": "9FBBC88F-0F09-46A2-8F02-31D46A91E83F",
+      "Views": [
+        {
+          "FullViewName": "dvwADV_PowerBI_PlatformAgreement_AgreementsCustom",
+          "DataModelEntityName": "AgreementsCustom",
+          "TypeOfContract": "Agreement",
+          "BusinessAppType": "Contracting",
+          "BusinessAppCategory": "",
+          "QueryBase": "",
+          "TypeOfView": "PowerBI",
+          "Comments": "",
+          "ExecSequence": 10011,
+          "PowerBIEntityName": "",
+          "ContractType": [
+            {
+              "CTName": "",
+              "IsActive": ""
+            }
+          ],
+          "Attributes": [
+            {
+              "Name": "EntityInstanceId",
+              "DisplayName": "EntityInstanceId",
+              "DataType": "UNIQUEIDENTIFIER",
+              "IsActive": true,
+              "JoinSelectColumn": "EntityInstanceId"
+            },
+            {
+              "Name": "StatusChangedDate",
+              "DisplayName": "Status Changed Date",
+              "DataType": "DATETIME",
+              "IsActive": true,
+              "JoinSelectColumn": "StatusChangedDate"
+            },
+            {
+              "Name": "ICMVendorName",
+              "DisplayName": "ICMVendorName",
+              "DataType": "NVARCHAR(1000)",
+              "IsActive": true,
+              "JoinType": "LEFT",
+              "JoinTable": "vwICMVendorMasterdata",
+              "ParentTable": "NA",
+              "JoinParentKey": "ICMVendorMasterdata_ICMVendorDetails",
+              "JoinChildKey": "Sysid",
+              "JoinSelectColumn": "ICMVendorName",
+              "SeqNo": 1
+            },
+            {
+              "Name": "OrgPathId",
+              "DisplayName": "OrgPathId",
+              "DataType": "UNIQUEIDENTIFIER",
+              "IsActive": true,
+              "JoinSelectColumn": "OrgPathId"
+            },
+            {
+              "Name": "ICMAgreementCode",
+              "DisplayName": "Agreement Code",
+              "DataType": "NVARCHAR(2000)",
+              "IsActive": true,
+              "JoinSelectColumn": "ICMAgreementCode"
+            },
+            {
+              "Name": "ICMContractValue",
+              "DisplayName": "Contract Value",
+              "DataType": "DECIMAL",
+              "IsActive": true,
+              "JoinSelectColumn": "ICMContractValue"
+            },
+            {
+              "Name": "TypeOfPaper",
+              "DisplayName": "Type Of Paper",
+              "DataType": "NVARCHAR(1000)",
+              "IsActive": true,
+              "JoinSelectColumn": "TypeOfPaper"
+            },
+            {
+              "Name": "Status",
+              "DisplayName": "Status",
+              "DataType": "NVARCHAR(2000)",
+              "IsActive": true,
+              "JoinSelectColumn": "Status"
+            },
+            {
+              "Name": "IsDeviated",
+              "DisplayName": "IsDeviated",
+              "DataType": "BIT",
+              "IsActive": true,
+              "JoinSelectColumn": "IsDeviated"
+            },
+            {
+              "Name": "ICMSignatureType",
+              "DisplayName": "Signature Type",
+              "DataType": "NVARCHAR(1000)",
+              "IsActive": true,
+              "JoinSelectColumn": "ICMSignatureType"
+            },
+            {
+              "Name": "ICMExpiryDate",
+              "DisplayName": "Expiry Date",
+              "DataType": "DATETIME",
+              "IsActive": true,
+              "JoinSelectColumn": "ICMExpiryDate"
+            },
+            {
+              "Name": "Name",
+              "DisplayName": "Agreement Name",
+              "DataType": "NVARCHAR(2000)",
+              "IsActive": true,
+              "JoinSelectColumn": "Name"
+            },
+            {
+              "Name": "ICMEntityName",
+              "DisplayName": "ICMEntityName",
+              "DataType": "NVARCHAR(2000)",
+              "IsActive": true,
+              "JoinType": "LEFT",
+              "JoinTable": "vwICMSNPSEntityMaster",
+              "ParentTable": "NA",
+              "JoinParentKey": "ICMSNPSEntityMaster_ICMSynopsysEntity",
+              "JoinChildKey": "Sysid",
+              "JoinSelectColumn": "ICMEntityName",
+              "SeqNo": 1
+            },
+            {
+              "Name": "CreatedBy",
+              "DisplayName": "CreatedBy",
+              "DataType": "NVARCHAR(1000)",
+              "IsActive": true,
+              "JoinType": "INNER",
+              "JoinTable": "vwUserInformation",
+              "ParentTable": "NA",
+              "JoinParentKey": "CreatedBy",
+              "JoinChildKey": "Identifier",
+              "JoinSelectColumn": "FullName",
+              "SeqNo": 1
+            },
+            {
+              "Name": "ICMPaymentTerms",
+              "DisplayName": "Payment Terms",
+              "DataType": "NVARCHAR(1000)",
+              "IsActive": true,
+              "JoinSelectColumn": "ICMPaymentTerms"
+            },
+            {
+              "Name": "ICMPaymentAmount",
+              "DisplayName": "ICMPaymentAmount",
+              "DataType": "DECIMAL",
+              "IsActive": true,
+              "JoinSelectColumn": "ICMPaymentAmount"
+            },
+            {
+              "Name": "CreatedDate",
+              "DisplayName": "Created Date",
+              "DataType": "DATETIME",
+              "IsActive": true,
+              "JoinSelectColumn": "CreatedDate"
+            },
+            {
+              "Name": "Name",
+              "DisplayName": "Org Name",
+              "DataType": "NVARCHAR(1000)",
+              "IsActive": true,
+              "JoinType": "INNER",
+              "JoinTable": "vwOrganizationUnit",
+              "ParentTable": "NA",
+              "JoinParentKey": "OrgPathId",
+              "JoinChildKey": "OrgPathId",
+              "JoinSelectColumn": "Name",
+              "SeqNo": 1
+            },
+            {
+              "Name": "ICMContractTypeName",
+              "DisplayName": "CTName",
+              "DataType": "NVARCHAR(2000)",
+              "IsActive": true,
+              "JoinSelectColumn": "ICMContractTypeName"
+            },
+            {
+              "Name": "ICMIsLegacy",
+              "DisplayName": "IsLegacy",
+              "DataType": "BIT",
+              "IsActive": true,
+              "JoinSelectColumn": "ICMIsLegacy"
+            },
+            {
+              "Name": "ICMEffectiveDate",
+              "DisplayName": "Effective Date",
+              "DataType": "DATETIME",
+              "IsActive": true,
+              "JoinSelectColumn": "ICMEffectiveDate"
+            },
+            {
+              "Name": "ICMContractRequestid",
+              "DisplayName": "ContractRequestid",
+              "DataType": "UNIQUEIDENTIFIER",
+              "IsActive": true,
+              "JoinSelectColumn": "ICMContractRequestid"
+            },
+            {
+              "Name": "ICMRenewal",
+              "DisplayName": "Renewal",
+              "DataType": "BIT",
+              "IsActive": true,
+              "JoinSelectColumn": "ICMRenewal"
+            },
+            {
+              "Name": "ICMRenewalPeriod",
+              "DisplayName": "Renewal Period",
+              "DataType": "BIGINT",
+              "IsActive": true,
+              "JoinSelectColumn": "ICMRenewalPeriod"
+            },
+            {
+              "Name": "ICMContractTerminmonths",
+              "DisplayName": "Contract Terms",
+              "DataType": "BIGINT",
+              "IsActive": true,
+              "JoinSelectColumn": "ICMContractTerminmonths"
+            },
+            {
+              "Name": "ICMVendorMasterdata_ICMVendorDetails",
+              "DisplayName": "ICMVendorMasterdata_ICMVendorDetails",
+              "DataType": "UNIQUEIDENTIFIER",
+              "IsActive": true,
+              "JoinSelectColumn": "ICMVendorMasterdata_ICMVendorDetails"
+            },
+            {
+              "Name": "ICMSNPSEntityMaster_ICMSynopsysEntity",
+              "DisplayName": "ICMSNPSEntityMaster_ICMSynopsysEntity",
+              "DataType": "UNIQUEIDENTIFIER",
+              "IsActive": true,
+              "JoinSelectColumn": "ICMSNPSEntityMaster_ICMSynopsysEntity"
+            },
+            {
+              "Name": "ICMProcurementSynopsysEntityMaster_ICMSynopsysEntity",
+              "DisplayName": "ICMProcurementSynopsysEntityMaster_ICMSynopsysEntity",
+              "DataType": "UNIQUEIDENTIFIER",
+              "IsActive": true,
+              "JoinSelectColumn": "ICMProcurementSynopsysEntityMaster_ICMSynopsysEntity"
+            },
+            {
+              "Name": "ICMSynopsysEntity",
+              "DisplayName": "ICMSynopsysEntity",
+              "DataType": "NVARCHAR(2000)",
+              "IsActive": true,
+              "JoinType": "LEFT",
+              "JoinTable": "vwICMProcurementSynopsysEntityMaster",
+              "ParentTable": "NA",
+              "JoinParentKey": "ICMProcurementSynopsysEntityMaster_ICMSynopsysEntity",
+              "JoinChildKey": "Sysid",
+              "JoinSelectColumn": "ICMSynopsysEntity",
+              "SeqNo": 1
+            },
+            {
+              "Name": "AgeingDays",
+              "DisplayName": "AgeingDays",
+              "DataType": "INT",
+              "IsActive": true,
+              "IsCalculatedColumn": true,
+              "CalculationExpression": "DATEDIFF(DAY,LEFT([Final].[Status Changed Date], 11), LEFT(GETUTCDATE(), 11))",
+              "JoinSelectColumn": "AgeingDays",
+              "Comments": "Calculates 'Ageing Days' using attribute 'Status Changed Date' from Final View"
+            },
+            {
+              "Name": "AVGTAT",
+              "DisplayName": "AVGTAT",
+              "DataType": "INT",
+              "IsActive": true,
+              "IsCalculatedColumn": true,
+              "CalculationExpression": "CASE WHEN [Final].[Status] IN ('Executed', 'Reviewed') THEN (CASE WHEN CONVERT(VARCHAR, [Final].[Created Date], 101) = CONVERT(VARCHAR, [Final].[Status Changed Date], 101) THEN 1 ELSE DATEDIFF(DAY, [Final].[Created Date], [Final].[Status Changed Date]) END) ELSE 0 END",
+              "JoinSelectColumn": "AVGTAT",
+              "Comments": "Calculates Average Turnaround Time"
+            },
+            {
+              "Name": "ICMVendorCity",
+              "DisplayName": "ICMVendorCity",
+              "DataType": "NVARCHAR(1000)",
+              "IsActive": true,
+              "JoinType": "LEFT",
+              "JoinTable": "vwICMVendorMasterdata",
+              "ParentTable": "NA",
+              "JoinParentKey": "ICMVendorMasterdata_ICMVendorDetails",
+              "JoinChildKey": "Sysid",
+              "JoinSelectColumn": "ICMVendorCity",
+              "SeqNo": 1
+            },
+            {
+              "Name": "ICMVendorId",
+              "DisplayName": "ICMVendorId",
+              "DataType": "NVARCHAR(1000)",
+              "IsActive": true,
+              "JoinType": "LEFT",
+              "JoinTable": "vwICMVendorMasterdata",
+              "ParentTable": "NA",
+              "JoinParentKey": "ICMVendorMasterdata_ICMVendorDetails",
+              "JoinChildKey": "Sysid",
+              "JoinSelectColumn": "ICMVendorId",
+              "SeqNo": 1
+            },
+            {
+              "Name": "ICMVendorCompanyCode",
+              "DisplayName": "ICMVendorCompanyCode",
+              "DataType": "NVARCHAR(1000)",
+              "IsActive": true,
+              "JoinType": "LEFT",
+              "JoinTable": "vwICMVendorMasterdata",
+              "ParentTable": "NA",
+              "JoinParentKey": "ICMVendorMasterdata_ICMVendorDetails",
+              "JoinChildKey": "Sysid",
+              "JoinSelectColumn": "ICMVendorCompanyCode",
+              "SeqNo": 1
+            },
+            {
+              "Name": "ICMVendorCountryDescription",
+              "DisplayName": "ICMVendorCountryDescription",
+              "DataType": "NVARCHAR(1000)",
+              "IsActive": true,
+              "JoinType": "LEFT",
+              "JoinTable": "vwICMVendorMasterdata",
+              "ParentTable": "NA",
+              "JoinParentKey": "ICMVendorMasterdata_ICMVendorDetails",
+              "JoinChildKey": "Sysid",
+              "JoinSelectColumn": "ICMVendorCountryDescription",
+              "SeqNo": 1
+            },
+            {
+              "Name": "ICMVendorPaymentMethods",
+              "DisplayName": "ICMVendorPaymentMethods",
+              "DataType": "NVARCHAR(1000)",
+              "IsActive": true,
+              "JoinType": "LEFT",
+              "JoinTable": "vwICMVendorMasterdata",
+              "ParentTable": "NA",
+              "JoinParentKey": "ICMVendorMasterdata_ICMVendorDetails",
+              "JoinChildKey": "Sysid",
+              "JoinSelectColumn": "ICMVendorPaymentMethods",
+              "SeqNo": 1
+            },
+            {
+              "Name": "ICMVendorPaymentMethodsDescription",
+              "DisplayName": "ICMVendorPaymentMethodsDescription",
+              "DataType": "NVARCHAR(1000)",
+              "IsActive": true,
+              "JoinType": "LEFT",
+              "JoinTable": "vwICMVendorMasterdata",
+              "ParentTable": "NA",
+              "JoinParentKey": "ICMVendorMasterdata_ICMVendorDetails",
+              "JoinChildKey": "Sysid",
+              "JoinSelectColumn": "ICMVendorPaymentMethodsDescription",
+              "SeqNo": 1
+            },
+            {
+              "Name": "ICMVendorRegionDescription",
+              "DisplayName": "ICMVendorRegionDescription",
+              "DataType": "NVARCHAR(1000)",
+              "IsActive": true,
+              "JoinType": "LEFT",
+              "JoinTable": "vwICMVendorMasterdata",
+              "ParentTable": "NA",
+              "JoinParentKey": "ICMVendorMasterdata_ICMVendorDetails",
+              "JoinChildKey": "Sysid",
+              "JoinSelectColumn": "ICMVendorRegionDescription",
+              "SeqNo": 1
+            },
+            {
+              "Name": "ICMVendorState",
+              "DisplayName": "ICMVendorState",
+              "DataType": "NVARCHAR(1000)",
+              "IsActive": true,
+              "JoinType": "LEFT",
+              "JoinTable": "vwICMVendorMasterdata",
+              "ParentTable": "NA",
+              "JoinParentKey": "ICMVendorMasterdata_ICMVendorDetails",
+              "JoinChildKey": "Sysid",
+              "JoinSelectColumn": "ICMVendorState",
+              "SeqNo": 1
+            },
+            {
+              "Name": "ICMVendorStreetandHouseNo",
+              "DisplayName": "ICMVendorStreetandHouseNo",
+              "DataType": "NVARCHAR(1000)",
+              "IsActive": true,
+              "JoinType": "LEFT",
+              "JoinTable": "vwICMVendorMasterdata",
+              "ParentTable": "NA",
+              "JoinParentKey": "ICMVendorMasterdata_ICMVendorDetails",
+              "JoinChildKey": "Sysid",
+              "JoinSelectColumn": "ICMVendorStreetandHouseNo",
+              "SeqNo": 1
+            },
+            {
+              "Name": "IsActive",
+              "DisplayName": "IsActiveVendor",
+              "DataType": "BIT",
+              "IsActive": true,
+              "JoinType": "LEFT",
+              "JoinTable": "vwICMVendorMasterdata",
+              "ParentTable": "NA",
+              "JoinParentKey": "ICMVendorMasterdata_ICMVendorDetails",
+              "JoinChildKey": "Sysid",
+              "JoinSelectColumn": "IsActive",
+              "SeqNo": 1
+            },
+            {
+              "Name": "IsActive",
+              "DisplayName": "IsActive Agreement",
+              "DataType": "BIT",
+              "IsActive": true,
+              "JoinSelectColumn": "IsActive"
+            },
+            {
+              "Name": "ICMRegionMaster_ICMContractRegion",
+              "DisplayName": "ICMRegionMaster_ICMContractRegion",
+              "DataType": "UNIQUEIDENTIFIER",
+              "IsActive": true,
+              "JoinSelectColumn": "ICMRegionMaster_ICMContractRegion"
+            },
+            {
+              "Name": "ICMRegion",
+              "DisplayName": "Region",
+              "DataType": "NVARCHAR(1000)",
+              "IsActive": true,
+              "JoinType": "LEFT",
+              "JoinTable": "vwICMRegionMaster",
+              "ParentTable": "NA",
+              "JoinParentKey": "ICMRegionMaster_ICMRegion",
+              "JoinChildKey": "Sysid",
+              "JoinSelectColumn": "ICMRegion",
+              "SeqNo": 1
+            },
+            {
+              "Name": "ICMProcurementContractRegionMaster_ICMContractRegion",
+              "DisplayName": "ICMProcurementContractRegionMaster_ICMContractRegion",
+              "DataType": "UNIQUEIDENTIFIER",
+              "IsActive": true,
+              "JoinSelectColumn": "ICMProcurementContractRegionMaster_ICMContractRegion"
+            },
+            {
+              "Name": "ICMRegion",
+              "DisplayName": "ICMContractRegion",
+              "DataType": "NVARCHAR(1000)",
+              "IsActive": true,
+              "JoinType": "LEFT",
+              "JoinTable": "vwICMProcurementContractRegionMaster",
+              "ParentTable": "NA",
+              "JoinParentKey": "ICMProcurementContractRegionMaster_ICMContractRegion",
+              "JoinChildKey": "Sysid",
+              "JoinSelectColumn": "ICMRegion",
+              "SeqNo": 1
+            },
+            {
+              "Name": "ICMCommodityCode",
+              "DisplayName": "CommodityCode",
+              "DataType": "NVARCHAR(2000)",
+              "IsActive": true,
+              "JoinSelectColumn": "ICMCommodityCode"
+            },
+            {
+              "Name": "ICMRegionMaster_ICMRegion",
+              "DisplayName": "ICMRegionMaster_ICMRegion",
+              "DataType": "UNIQUEIDENTIFIER",
+              "IsActive": true,
+              "JoinSelectColumn": "ICMRegionMaster_ICMRegion"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
